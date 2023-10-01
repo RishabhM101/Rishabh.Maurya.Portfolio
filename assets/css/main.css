@@ -3281,6 +3281,25 @@ input, select, textarea {
 
 		}
 
+		@media screen and (max-width: 600px) {
+			#wrapper > .bg {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #212931;
+				background-image: url("../../images/Wallpaper_phone.jpg"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
+				background-size: cover; /* This will scale the background image to be as large as possible */
+				background-position: center;
+				background-repeat: no-repeat;
+				z-index: -1;
+			}
+			
+			/* CSS rules for screens smaller than or equal to 600px */
+		  }
+		  
+
 /* Intro */
 
 	#intro {
@@ -3301,7 +3320,7 @@ input, select, textarea {
 		-moz-justify-content: -moz-flex-end;
 		-webkit-justify-content: -webkit-flex-end;
 		-ms-justify-content: -ms-flex-end;
-		justify-content: flex-end;
+		justify-content: center;
 		-moz-transition: opacity 1s ease, -moz-transform 1s ease;
 		-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
 		-ms-transition: opacity 1s ease, -ms-transform 1s ease;
@@ -3970,7 +3989,7 @@ input, select, textarea {
 	}
 
 	#main2 > .post {
-		padding: 0rem 8rem 0rem 8rem ;
+		padding: 0rem 8rem rem 8rem ;
 	}
 
 		#main2 > .post header.major > .date {
