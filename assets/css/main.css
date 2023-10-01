@@ -3234,10 +3234,10 @@ input, select, textarea {
 			width: 100%;
 			height: 100%;
 			background-color: #212931;
-			background-image: url("../../images/wallpaperflare.com_wallpaper (2).jpg"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
+			background-image: url("../../images/background.jpg"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
 			background-size: auto,								auto,														100% auto;
 			background-position: center,								center,														top center;
-			background-repeat:no-repeat,								no-repeat,													no-repeat;
+			background-repeat: repeat,								no-repeat,													no-repeat;
 			background-attachment: scroll,								scroll,														scroll;
 			z-index: -1;
 		}
@@ -3281,25 +3281,6 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 600px) {
-			#wrapper > .bg {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background-color: #212931;
-				background-image: url("../../images/Wallpaper_phone.jpg"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
-				background-size: cover; /* This will scale the background image to be as large as possible */
-				background-position: center;
-				background-repeat: no-repeat;
-				z-index: -1;
-			}
-			
-			/* CSS rules for screens smaller than or equal to 600px */
-		  }
-		  
-
 /* Intro */
 
 	#intro {
@@ -3320,7 +3301,7 @@ input, select, textarea {
 		-moz-justify-content: -moz-flex-end;
 		-webkit-justify-content: -webkit-flex-end;
 		-ms-justify-content: -ms-flex-end;
-		justify-content: center;
+		justify-content: flex-end;
 		-moz-transition: opacity 1s ease, -moz-transform 1s ease;
 		-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
 		-ms-transition: opacity 1s ease, -ms-transform 1s ease;
@@ -3770,7 +3751,7 @@ input, select, textarea {
 				display: none;
 			}
 
-		} 
+		}
 
 /* Main */
 
@@ -3798,7 +3779,7 @@ input, select, textarea {
 		}
 
 		#main > .post {
-			padding: 6rem 4rem 1rem 4rem ;
+			padding: 8rem 8rem 6rem 8rem ;
 		}
 
 			#main > .post header.major > .date {
@@ -3814,7 +3795,7 @@ input, select, textarea {
 			#main > .post.featured {
 				text-align: center;
 			}
-			
+
 			@media screen and (max-width: 1280px) {
 
 				#main > .post {
@@ -3826,7 +3807,7 @@ input, select, textarea {
 			@media screen and (max-width: 736px) {
 
 				#main > .post {
-					padding: 4rem 1rem 1rem 1rem ;
+					padding: 4rem 2rem 2rem 2rem ;
 				}
 
 					#main > .post header.major > .date {
@@ -3840,7 +3821,7 @@ input, select, textarea {
 						margin: 0 0 1.5rem 0;
 					}
 
-			} 
+			}
 
 		#main > .posts {
 			display: -moz-flex;
@@ -3914,14 +3895,9 @@ input, select, textarea {
 			}
 
 			@media screen and (max-width: 736px) {
-				#main {
-					background-color: #ffffff;
-					position: relative;
-					margin: 0 auto;
-					width: calc(100% - 2rem);
-					max-width: 72rem;
-					z-index: 2;
 
+				#main > .posts > * {
+					width: 100%;
 				}
 
 				#main > .posts > * {
@@ -3952,11 +3928,11 @@ input, select, textarea {
 				}
 
 			}
-/*
+
 		@media screen and (max-width: 736px) {
 
 			#main > * {
-				padding: 0rem 4rem 0rem 2rem ;
+				padding: 2rem 2rem 0.1rem 2rem ;
 			}
 
 		}
@@ -3967,9 +3943,7 @@ input, select, textarea {
 				width: 100%;
 			}
 
-		} 
-*/
-
+		}
 
 /* Footer */
 
