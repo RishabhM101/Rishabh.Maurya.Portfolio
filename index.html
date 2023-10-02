@@ -14,13 +14,12 @@
 
 		<style>
 			#rocket {
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				transition: bottom 5s;
-				width: 100px;
-				height: 100px;
-			}
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: bottom 5s;
+    z-index: 9999; /* any high number to ensure it's on top */
+}
 			@media (max-width: 600px) {
 				#rocket {
 					width: 50px;
