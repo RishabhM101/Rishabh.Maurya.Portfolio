@@ -2960,7 +2960,7 @@ input, select, textarea {
 
 			header.major > .date {
 				font-size: 1rem;
-				margin: 0 0 4rem 0;
+				margin: 0 0 1rem 0;
 			}
 
 				header.major > .date:before, header.major > .date:after {
@@ -3237,7 +3237,7 @@ input, select, textarea {
 			background-image: url("../../images/background.jpg"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
 			background-size: auto,								auto,														100% auto;
 			background-position: center,								center,														top center;
-			background-repeat: repeat,								no-repeat,													no-repeat;
+			background-repeat: no-repeat,								no-repeat,													no-repeat;
 			background-attachment: scroll,								scroll,														scroll;
 			z-index: -1;
 		}
@@ -3281,6 +3281,24 @@ input, select, textarea {
 
 		}
 
+		@media screen and (max-width: 736px) {
+
+			#wrapper > .bg {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #212931;
+				background-image: url("../../images/background_phone.jpg"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
+				background-size: auto,								auto,														100% auto;
+				background-position: center,								center,														top center;
+				background-repeat: no-repeat,								no-repeat,													no-repeat;
+				background-attachment: scroll,								scroll,														scroll;
+				z-index: -1;
+			}
+		}
+
 /* Intro */
 
 	#intro {
@@ -3301,7 +3319,7 @@ input, select, textarea {
 		-moz-justify-content: -moz-flex-end;
 		-webkit-justify-content: -webkit-flex-end;
 		-ms-justify-content: -ms-flex-end;
-		justify-content: flex-end;
+		justify-content: center;
 		-moz-transition: opacity 1s ease, -moz-transform 1s ease;
 		-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
 		-ms-transition: opacity 1s ease, -ms-transform 1s ease;
@@ -3478,12 +3496,12 @@ input, select, textarea {
 					line-height: 1.1;
 					margin-bottom: 1rem;
 				}
-
+				/*
 				#intro p {
 					font-size: 1rem;
 					margin-top: 0rem;
 				}
-
+				*/
 				#intro .actions {
 					display: none;
 				}
@@ -3765,8 +3783,8 @@ input, select, textarea {
 	}
 
 		#main > * {
-			padding: 4rem 4rem 2rem 4rem ;
-			border-top: solid 2px #eeeeee;
+			padding: 4rem 4rem 0rem 4rem ;
+			
 			margin: 0;
 		}
 
@@ -3779,7 +3797,7 @@ input, select, textarea {
 		}
 
 		#main > .post {
-			padding: 8rem 8rem 6rem 8rem ;
+			padding: 5rem 8rem 1rem 8rem ;
 		}
 
 			#main > .post header.major > .date {
@@ -3820,6 +3838,7 @@ input, select, textarea {
 						line-height: 1.2;
 						margin: 0 0 1.5rem 0;
 					}
+					
 
 			}
 
@@ -3839,6 +3858,7 @@ input, select, textarea {
 			text-align: center;
 			width: 100%;
 			padding: 0;
+			
 		}
 
 			#main > .posts > * {
@@ -3851,6 +3871,7 @@ input, select, textarea {
 				-ms-flex-grow: 0;
 				flex-grow: 0;
 			}
+			
 
 			#main > .posts > * {
 				width: 50%;
@@ -3864,8 +3885,8 @@ input, select, textarea {
 			#main > .posts > article {
 				border-color: #eeeeee;
 				border-left-width: 2px;
-				border-style: solid;
-				border-top-width: 2px;
+				
+			
 				text-align: center;
 			}
 
@@ -3907,6 +3928,7 @@ input, select, textarea {
 
 				#main > .posts > article:nth-child(2n - 1) {
 					border-left-width: 2px;
+					
 				}
 
 				#main > .posts > article:nth-child(-n + 2) {
@@ -3926,24 +3948,45 @@ input, select, textarea {
 					margin-left: auto;
 					margin-right: auto;
 				}
+				@media screen and (max-width: 736px) {
+					h1 {
+						font-size: 2.5em; /* smaller size for screens up to 736px wide */
+					}
+					h2 {
+						font-size: 1.3em; /* smaller size for screens up to 736px wide */
+						
+					}
+					
+				}
 
+				
 			}
+			 
 
 		@media screen and (max-width: 736px) {
 
 			#main > * {
 				padding: 2rem 2rem 0.1rem 2rem ;
 			}
-
-		}
-
-		@media screen and (max-width: 480px) {
-
 			#main {
-				width: 100%;
+				width: calc(100% - 2.5rem);
+			}
+			#main > .post header.major > .date {
+				margin-top: -1rem;
+				margin-bottom: 2rem;
+			}
+	
+			#main > .post header.major > h1, #main > .post header.major h2 {
+				font-size: 2.5rem;
+				line-height: 1.2;
+				margin: 0 0 1.5rem 0;
 			}
 
 		}
+
+	
+	
+		
 
 /* Footer */
 
