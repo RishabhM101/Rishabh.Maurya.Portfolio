@@ -18,8 +18,27 @@
 				bottom: 0;
 				left: 0;
 				transition: bottom 5s;
+				width: 100px;
+				height: 100px;
 			}
-		</style>
+			@media (max-width: 600px) {
+				#rocket {
+					width: 50px;
+					height: 50px;
+				}
+			}
+			@keyframes vibrate {
+            0% { transform: translate(0); }
+            20% { transform: translate(-5px, 5px); }
+            40% { transform: translate(-5px, -5px); }
+            60% { transform: translate(5px, 5px); }
+            80% { transform: translate(5px, -5px); }
+            100% { transform: translate(0); }
+        }
+        .vibrate {
+            animation: vibrate 0.2s linear infinite;
+        }
+    </style>
 	</head>
 	<body class="is-preload">
 
@@ -230,11 +249,15 @@
 					</div>
 -->
 			
-<img id="rocket" src="images/rocket.png" onclick="launch()" width="200" height="200">
+<img id="rocket" src="images/rocket.png" onclick="launch()">
 <script>
 	function launch() {
-    document.getElementById('rocket').style.bottom = document.body.scrollHeight + 'px';
-}
+		document.getElementById('rocket').style.bottom = document.body.scrollHeight + 'px';
+		document.body.classList.add('vibrate');
+		setTimeout(function() {
+			document.body.classList.remove('vibrate');
+		}, 5000);
+	}
 </script>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
